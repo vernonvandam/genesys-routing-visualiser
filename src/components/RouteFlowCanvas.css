@@ -1,0 +1,180 @@
+.route-flow-canvas {
+  width: 100%;
+  min-height: 600px;
+  flex: 1;
+  overflow: hidden;
+  background: #f8fafd;
+}
+
+.flow-route-node {
+  position: relative;
+  width: 280px;
+  padding: 15px;
+  border: 1px solid #dce4ef;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(30 50 82 / 8%);
+}
+
+.flow-route-node.terminal {
+  border-color: #c9e4d7;
+}
+
+.flow-route-node.warning,
+.flow-route-node.cycle {
+  border-color: #eccf9f;
+  background: #fffdf9;
+}
+
+.flow-route-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flow-route-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  place-items: center;
+  border-radius: 10px;
+  background: #edf3ff;
+  color: #386cc8;
+  font-size: 14px;
+}
+
+.flow-route-icon.terminal {
+  background: #eaf7f0;
+  color: #258565;
+  font-size: 8px;
+}
+
+.flow-route-icon.diagnostic {
+  background: #fff1df;
+  color: #a96319;
+  font-weight: 800;
+}
+
+.flow-route-title {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.flow-route-title span {
+  color: #8491a5;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.flow-route-title strong {
+  color: #30415b;
+  font-size: 11px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.flow-route-status {
+  margin-left: auto;
+  color: #a26722;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.flow-route-details {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 0 42px;
+  padding: 0;
+  color: #718098;
+  font-size: 9px;
+  line-height: 1.5;
+  list-style: none;
+  overflow-wrap: anywhere;
+}
+
+.flow-route-node .react-flow__handle {
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  background: #8197b5;
+}
+
+.route-flow-canvas .react-flow__edge-path {
+  stroke: #9aabc3;
+  stroke-width: 1.7;
+}
+
+.route-flow-canvas .react-flow__edge-text {
+  fill: #65748c;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.route-flow-canvas .react-flow__controls {
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  box-shadow: 0 4px 14px rgb(30 50 82 / 8%);
+}
+
+.route-flow-canvas .react-flow__controls-button {
+  border-bottom-color: #e8edf4;
+  background: #fff;
+  fill: #5f6e85;
+}
+
+.route-flow-canvas .react-flow__minimap {
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.route-export-panel {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+}
+
+.route-export-actions {
+  display: flex;
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 95%);
+  box-shadow: 0 4px 14px rgb(30 50 82 / 8%);
+}
+
+.route-export-actions button {
+  min-height: 30px !important;
+  padding: 0 10px !important;
+  font-size: 10px !important;
+}
+
+.route-export-panel p {
+  max-width: 260px;
+  margin: 0;
+  padding: 7px 9px;
+  border: 1px solid #f1ceca;
+  border-radius: 7px;
+  background: #fff6f5;
+  color: #8e4641;
+  font-size: 10px;
+}
+
+@media (max-width: 820px) {
+  .route-flow-canvas {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 560px) {
+  .route-flow-canvas {
+    min-height: 420px;
+  }
+}
